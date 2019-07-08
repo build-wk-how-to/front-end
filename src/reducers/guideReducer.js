@@ -1,0 +1,92 @@
+import {
+  FAIL,
+  FETCHING,
+  FETCHED,
+  ADDING,
+  ADDED,
+  UPDATING,
+  UPDATED,
+  DELETING,
+  DELETED    
+}from '../actions';
+
+const initialGuideState = {
+  fetching: false,
+  adding: false,
+  updating: false,
+  deleting: false,
+  guides: [],
+  category: 0,
+  error: null
+}
+
+export const listReducer = (state = initialGuideState, action) => {
+  switch (action.type) {
+    case FETCHING:
+      return {
+        ...state,
+        fetching: true,
+        error: ''
+      }
+    case FETCHED: {
+      let cat = 0;
+      if(action.payload.category !== 0){
+        cat = action.payload.category;
+      }
+      return {
+        ...state,
+        guides: action.payload.guides,
+        fetching: false,
+        category: cat,
+        error: ''
+      }
+    }
+    case ADDING:
+      return {
+        ...state,
+        adding: true,
+        error: ''
+      }
+    case ADDED:
+      return {
+        ...state,
+        adding: false,
+        error: ''
+      }
+    case DELETING:
+      return {
+        ...state,
+        deleting: true,
+        error: ''
+      }
+    case DELETED:
+      return {
+        ...state,
+        deleting: false,
+        error: ''
+        }
+    case UPDATING:
+      return {
+        ...state,
+        updating: true,
+        error: ''
+      }
+    case UPDATED:
+      return {
+        ...state,
+        updating: false,
+        error: ''
+        }
+    case FAIL:
+      return {
+        ...state,
+        fetching: false,
+        adding: false,
+        updating: false,
+        deleting: false,
+        error: action.payload
+      }
+    default:
+      return state;
+  }
+}
