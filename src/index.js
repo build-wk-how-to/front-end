@@ -10,6 +10,9 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import {loadState, saveState} from './components/LocalStorage';
 
+
+//if you've never used them before, these functions preserve the state of the redux store between page reloads
+//the functions themselves are in LocalStorage.js in /components
 const persistedStore = loadState();
 const store = createStore(
     rootReducer,
