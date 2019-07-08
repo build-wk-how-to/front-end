@@ -1,14 +1,48 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
+import {Route} from 'react-router-dom';
+import {SignupView} from './views/SignupView';
+// import {Link} from 'react-router-dom';
+import { connect } from 'react-redux';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      <p>hi</p>
-      </header>
-    </div>
-  );
+class App extends Component {
+    
+  // componentDidMount(){
+  //   this.setState({
+  //     ...this.state,
+
+  //   })
+  // }
+
+  // logout = () => {
+  //   console.log('pow');
+  //   this.setState({
+  //     ...this.state,
+  //     token: null,
+  //     displayName: ''
+  //   });
+  //   localStorage.clear();
+  //   window.location.reload();
+  // }
+
+
+  render() {
+    return (
+      <>
+        <Route path='/signup/' component={SignupView} />
+        {/* <Route exact path='/' render={props =>(
+          this.props.loggedIn === true 
+          ? <MainView {...props}/>
+          : <LoginView {...props}/>
+        )} /> */}
+      </>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    loggedIn: state.login.loggedIn
+  }
+}
+
+export default connect(mapStateToProps, {})(App);

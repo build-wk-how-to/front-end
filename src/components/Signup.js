@@ -42,6 +42,22 @@ class Signup extends Component {
                 name='password'
                 type='password'
             />
+            <p>select user type:</p>
+            <p>general user</p>
+            <input
+              onChange={this.input}
+              value={1}
+              name='usertype'
+              type='radio'
+            />
+            <p>content creator</p>
+            <input
+              onChange={this.input}
+              value={2}
+              name='usertype'
+              type='radio'
+            />
+            <br />
             <button className='signup-button' type='submit'>sign up</button>
         </form>
       </div>
