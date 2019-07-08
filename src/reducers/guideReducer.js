@@ -20,7 +20,7 @@ const initialGuideState = {
   error: null
 }
 
-export const listReducer = (state = initialGuideState, action) => {
+export const guideReducer = (state = initialGuideState, action) => {
   switch (action.type) {
     case FETCHING:
       return {
