@@ -38,7 +38,9 @@ export const ADDED = 'ADDED';
 export const UPDATING = 'UPDATING';
 export const UPDATED = 'UPDATED';
 export const DELETING = 'DELETING';
-export const DELETED = 'DELETED'; 
+export const DELETED = 'DELETED';
+export const FETCHING_CAT = 'FETCHING_CAT';
+export const FETCHED_CAT = 'FETCHED_CAT';
 
 export const fetchAll = (token) => dispatch => {
     dispatch({type: FETCHING});
@@ -104,5 +106,13 @@ export const deleteGuide = (userID, guideID, token) => dispatch => {
     axios.delete(`${baseUrl}/api/${userID}/guides/${guideID}`, {headers: headers})
         .then(res => dispatch({type: DELETED, payload: res.data}))
         .then(() => fetchByUser(userID, token)(dispatch))
+        .catch(err => dispatch({type: FAIL, payload: err}))
+}
+
+export const getCategories = token => dispatch => {
+    dispatch({type: FETCHING_CAT});
+    let headers = {Authorization: token,};
+    axios.get(`${baseUrl}/api/categories`, {headers: headers})
+        .then(res => dispatch({type: FETCHED_CAT, payload: res.data}))
         .catch(err => dispatch({type: FAIL, payload: err}))
 }

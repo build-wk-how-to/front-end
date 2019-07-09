@@ -19,7 +19,7 @@ class CruddableGuide extends Component {
   }
 
   delete = () =>{
-    deleteGuide(this.props.userID, this.state.guideID, this.state.token)
+    deleteGuide(this.props.userID, this.state.guideID, this.props.token)
   }
 
   render(){
