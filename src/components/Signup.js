@@ -11,21 +11,23 @@ class Signup extends Component {
   }
 
   input = e => {
-      this.setState({ [e.target.name]: e.target.value });
+      this.setState({
+        ...this.state,
+        [e.target.name]: e.target.value 
+      });
     };
 
   signup = e => {
       e.preventDefault();
-      console.log(this.state);
+      // console.log(this.state);
       this.props.signup(this.state);
   }
 
   render(){
     return(
       <div>
-        <h3>{this.props.displayText}</h3>
+        {/* <h3>{this.props.displayText}</h3> */}
         <form onSubmit={this.signup}>
-            <p>your name</p>
             <p>username</p>
             <input
                 onChange={this.input}
