@@ -4,6 +4,9 @@ p {
     font-weight: bold;
 }
 
+body {
+    background-color: lightgray;
+}
 
 /*Login Page*/
 
@@ -25,6 +28,8 @@ p {
     border: 2px solid red;
     margin: 10px;
     padding: 5px;
+    border-radius: 10px;
+
 }
 
 .login-form button {
@@ -32,6 +37,8 @@ p {
     width: 150px;
     margin: 10px;
     padding: 5px;
+    border-radius: 10px;
+
 }
 
 
@@ -50,6 +57,8 @@ p {
     border: 2px solid red;
     margin: 10px;
     padding: 5px;
+    border-radius: 10px;
+
 }
 
 .signup-form button {
@@ -57,4 +66,20 @@ p {
     width: 150px;
     margin: 10px;
     padding: 5px;
+    border-radius: 10px;
+
+}
+
+/*Navigation Page*/
+
+.navigation-page {
+    border: 2px solid purple;
+    display: flex; 
+    justify-content: center;
+    margin: 10px;
+}
+
+.navigation-links {
+    text-decoration: none;
+    margin: 10px;
 }
