@@ -5,9 +5,11 @@ p {
 }
 
 body {
-    background-color: lightgray;
 }
 
+h1 {
+    color: #5B61FF;
+}
 /*Login Page*/
 
 .login-page {
