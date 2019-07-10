@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {addGuide} from '../actions/index';
+import './Components.css';
+
 
 class NewGuide extends Component {
   constructor(props){

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {login} from '../actions';
+import './Components.css';
 
 
 
@@ -21,9 +22,9 @@ class Login extends Component {
     
     render() {
         return (
-          <div>
+          <div className="login-page">
             
-              <div title="Login">
+              <div title="Login" className="login-form">
                 <form onSubmit={this.login}>
                   <input
                   placeholder="Enter your username"

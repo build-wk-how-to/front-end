@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink, Link} from 'react-router-dom';
+import './Components.css';
+
 
 export const Navigation = props => {
 
@@ -11,9 +13,9 @@ export const Navigation = props => {
       && <NavLink to='/signup' activeClassName='inUse'>Sign Up</NavLink>
   
   return(
-      <div>
+      <div className="navigation-page">
           <h1>How-To</h1>
-          <div>
+          <div className="navigation-links">
               {navSwap}              
               {signSwap}
           </div>
