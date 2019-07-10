@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import {signup} from '../actions';
+import './Components.css';
+
 
 class Signup extends Component {
 
@@ -25,10 +27,10 @@ class Signup extends Component {
 
   render(){
     return(
-      <div>
+      <div className="signup-form">
         {/* <h3>{this.props.displayText}</h3> */}
         <form onSubmit={this.signup}>
-            <p>username</p>
+            <p>Username:</p>
             <input
                 onChange={this.input}
                 placeholder='Username'
@@ -36,7 +38,7 @@ class Signup extends Component {
                 name='username'
                 type='text'
             />
-            <p>password</p>
+            <p>Password:</p>
             <input
                 onChange={this.input}
                 placeholder='Password'
@@ -44,15 +46,15 @@ class Signup extends Component {
                 name='password'
                 type='password'
             />
-            <p>select user type:</p>
-            <p>general user</p>
+            <p>Select User Type:</p>
+            <p>General User</p>
             <input
               onChange={this.input}
               value={1}
               name='usertype'
               type='radio'
             />
-            <p>content creator</p>
+            <p>Content Creator</p>
             <input
               onChange={this.input}
               value={2}
