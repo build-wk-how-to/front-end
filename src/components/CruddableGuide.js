@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {updateGuide, deleteGuide} from '../actions/index';
+import './Components.css';
+
 
 class CruddableGuide extends Component {
   constructor(props){
