@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+//import { NavLink, Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import {login} from '../actions';
 import './Components.css';
@@ -19,12 +20,13 @@ class Login extends Component {
       this.props.login(this.state);
       this.props.history.push('/');
     }
+
     
     render() {
         return (
           
           <div className="login-page">
-            
+
               <div title="Login" className="login-form">
                 <form onSubmit={this.login}>
                   <h4>Username:</h4>

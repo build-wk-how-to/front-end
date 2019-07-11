@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, Link} from 'react-router-dom';
 import './Components.css';
-import logo from './how-to-logo.jpg'
+import logo from './how-to-logo.jpg.png'
 
 
 export const Navigation = props => {
