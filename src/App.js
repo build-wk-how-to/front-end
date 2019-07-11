@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {Route} from 'react-router-dom';
 import {SignupView} from './views/SignupView';
-import {LoginView} from './views/LoginView';
-import {MainView} from './views/MainView';
+import {Login} from './components/index';
+import MainView from './views/MainView';
 import {Navigation} from './components/Navigation';
 // import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -35,7 +35,7 @@ class App extends Component {
         <Route exact path='/' render={props =>(
           this.props.loggedIn === true 
           ? <MainView {...props}/>
-          : <LoginView {...props}/>
+          : <Login {...props}/>
         )} />
       </>
     );

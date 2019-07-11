@@ -6,7 +6,7 @@ export const SEND_SIGNUP = 'SEND_SIGNUP';
 export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS';
 export const SIGNUP_FAIL = 'SIGNUP_FAIL';
 
-const baseUrl = 'http://localhost:9000'; //make dynamic later
+const baseUrl = 'https://bwhowto.herokuapp.com'; //make dynamic later
 
 export const signup = x => dispatch => {
     dispatch({type: SEND_SIGNUP});
@@ -85,7 +85,7 @@ export const fetchByGuideReadOnly = (guideID, token) => dispatch => {
 export const addGuide = (userID, guide, token) => dispatch => {
     dispatch({type: ADDING});
     let headers = {Authorization: token,};
-    axios.post(`${baseUrl}/api/users/${userID}`, guide, {headers: headers})
+    axios.post(`${baseUrl}/api/users/${userID}/guides`, guide, {headers: headers})
         .then(res => dispatch({type: ADDED, payload: res.data}))
         .then(() => fetchByUser(userID, token)(dispatch))
         .catch(err => dispatch({type: FAIL, payload: err}));
