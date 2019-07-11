@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {addGuide} from '../actions/index';
+import {addGuide, getCategories} from '../actions/index';
 import './Components.css';
 
 
@@ -10,11 +10,13 @@ class NewGuide extends Component {
       guidename: '',
       owner: this.props.owner,
       guidecontent: '',
-      category: '',
+      category: 0,
       dateposted: '' 
     }
   }
 
+  categories = [];
+  options = [];
   date = new Date();
   today = `${this.date.getFullYear()}-${this.date.getMonth()+1}-${this.date.getDate()}`
 
@@ -22,7 +24,10 @@ class NewGuide extends Component {
     this.setState({
       ...this.state,
       dateposted: this.today
-    })
+    });
+    this.categories = getCategories().map(val => {
+      return <option value={val.categoryID}>{val.categoryname}</option>
+    });
   }
 
   input = e => {
@@ -57,6 +62,13 @@ class NewGuide extends Component {
             type='text'
             rows='10'
           ></textarea>
+          <h3>Tag:</h3>
+          <select
+            onChange={this.input}
+            name='category'
+          >
+            {this.categories}
+          </select>
           <button type='submit'>Post it!</button>
         </form>
       </>
