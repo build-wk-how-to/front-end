@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import { NavLink, Link} from 'react-router-dom';
 import { connect } from 'react-redux';
-import {login} from '../actions';
+import {login, fetchAll} from '../actions';
 import './Components.css';
 
 

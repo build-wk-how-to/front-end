@@ -6,7 +6,7 @@ export const SEND_SIGNUP = 'SEND_SIGNUP';
 export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS';
 export const SIGNUP_FAIL = 'SIGNUP_FAIL';
 
-const baseUrl = 'https://bwhowto.herokuapp.com'; //make dynamic later
+const baseUrl = 'https://bwhowto.herokuapp.com';
 
 export const signup = x => dispatch => {
     dispatch({type: SEND_SIGNUP});

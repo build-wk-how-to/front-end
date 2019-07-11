@@ -4,6 +4,7 @@ const initialLoginState = {
     username: '',
     token: '',
     userID: '',
+    usertype: 0,
     loggedIn: false,
     isLoading: false
 }
@@ -21,6 +22,7 @@ export const loginReducer = (state = initialLoginState, action) => {
         username: action.payload.username,
         token: action.payload.token,
         userID: action.payload.userID,
+        usertype: action.payload.usertype,
         loggedIn: true,
         isLoading: false
       }
