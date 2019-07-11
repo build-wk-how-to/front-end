@@ -18,27 +18,35 @@ h1 {
 }
 .login-form {
     border: 2px solid black;
+    background-color: lightgray;
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 10px;
+    margin: 100px;
+    height: 350px;
 
 }
 
 .login-form input {
-    border: 2px solid red;
-    margin: 10px;
+    border: 2px solid  #5B61FF;
+    margin: 2px 15px 25px 15px;
     padding: 5px;
     border-radius: 10px;
+    width: 300px;
+    height: 30px;
 
 }
 
 .login-form button {
-    border: 2px solid green; 
+    border: 2px solid  darkgray; 
+    cursor: pointer;
+    font-weight: bold;
     width: 150px;
-    margin: 10px;
+    margin-left: 95px;
+    margin-bottom: 10px;
     padding: 5px;
     border-radius: 10px;
+    background-color:  #5B61FF;
 
 }
 
@@ -63,7 +71,7 @@ h1 {
 }
 
 .signup-form button {
-    border: 2px solid green; 
+    border: 2px solid black; 
     width: 150px;
     margin: 10px;
     padding: 5px;

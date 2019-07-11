@@ -26,6 +26,7 @@ class Login extends Component {
             
               <div title="Login" className="login-form">
                 <form onSubmit={this.login}>
+                  <h4>Username:</h4>
                   <input
                   placeholder="Enter your username"
                   //value={this.state.username}
@@ -34,6 +35,7 @@ class Login extends Component {
                   onChange = {(e,newValue) => this.setState({username:newValue})}
                   />
                 <br/>
+                  <h4>Password:</h4>
                     <input
                     placeholder='Enter your password'
                   // value={this.state.password}
