@@ -19,6 +19,13 @@ class Login extends Component {
       this.props.login(this.state);
       this.props.history.push('/');
     }
+
+    input = e => {
+      this.setState({
+        ...this.state,
+        [e.target.name]: e.target.value 
+      });
+    };
     
     render() {
         return (
@@ -30,16 +37,18 @@ class Login extends Component {
                   placeholder="Enter your username"
                   //value={this.state.username}
                   name='username'
+                  value={this.state.username}
                   type='text'
-                  onChange = {(e,newValue) => this.setState({username:newValue})}
+                  onChange = {this.input}
                   />
                 <br/>
                     <input
                     placeholder='Enter your password'
                   // value={this.state.password}
                     name='password'
+                    value={this.state.password}
                     type='password'
-                    onChange = {(e,newValue) => this.setState({password:newValue})}
+                    onChange = {this.input}
                     />
                   <br/>
                   <button className='login-button' type='submit'>Log In</button>
