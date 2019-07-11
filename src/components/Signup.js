@@ -27,10 +27,11 @@ class Signup extends Component {
 
   render(){
     return(
+      <div className="signup-page">
       <div className="signup-form">
         {/* <h3>{this.props.displayText}</h3> */}
         <form onSubmit={this.signup}>
-            <p>Username:</p>
+            <h4>Username:</h4>
             <input
                 onChange={this.input}
                 placeholder='Username'
@@ -38,7 +39,7 @@ class Signup extends Component {
                 name='username'
                 type='text'
             />
-            <p>Password:</p>
+            <h4>Password:</h4>
             <input
                 onChange={this.input}
                 placeholder='Password'
@@ -46,24 +47,28 @@ class Signup extends Component {
                 name='password'
                 type='password'
             />
-            <p>Select User Type:</p>
-            <p>General User</p>
-            <input
+           
+            <h4>Select User Type:</h4>
+            <h5>General User</h5>
+            <input className='radio-button'
               onChange={this.input}
               value={1}
               name='usertype'
               type='radio'
             />
-            <p>Content Creator</p>
-            <input
+            <h5>Content Creator</h5>
+            <input className='radio-button'
               onChange={this.input}
               value={2}
               name='usertype'
               type='radio'
             />
-            <br />
-            <button className='signup-button' type='submit'>sign up</button>
+            
+            <br/>
+
+            <button className='signup-button' type='submit'>Sign Up</button>
         </form>
+      </div>
       </div>
     )
   }

@@ -14,70 +14,117 @@ h1 {
 .login-page {
     display: flex;
     justify-content: center;
-    border: 1px solid blue;
+    
 }
+
 .login-form {
-    border: 2px solid black;
+    border: 1px solid darkgray;
+    background-color: lightgray;
     display: flex;
     justify-content: center;
-    align-content: center;
-    margin: 10px;
+    align-items: center;
+    margin: 100px;
+    height: 350px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 
 }
 
 .login-form input {
-    border: 2px solid red;
-    margin: 10px;
+    border: 2px solid  #5B61FF;
+    margin: 2px 15px 25px 15px;
     padding: 5px;
     border-radius: 10px;
+    width: 300px;
+    height: 30px;
 
 }
 
 .login-form button {
-    border: 2px solid green; 
+    border: 1px solid  black; 
+    cursor: pointer;
+    font-weight: bold;
     width: 150px;
-    margin: 10px;
+    margin-left: 95px;
+    margin-top: 10px;
     padding: 5px;
     border-radius: 10px;
+    background-color:  #B549FF;
 
 }
 
+.login-form button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-form h4 {
+    margin-left: 15px;
+}
 
 /*Signup Page*/
 
+.signup-page {
+    display: flex;
+    justify-content: center;
+    
+}
 .signup-form {
-    border: 2px solid black;
+    border: 1px solid darkgray;
+    background-color: lightgray;
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 10px;
+    margin: 5px;
+    height: 620px;
+    width: 25%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 
 }
 
 .signup-form input {
-    border: 2px solid red;
-    margin: 10px;
+    border: 2px solid  #5B61FF;
+    margin: 2px 15px 25px 15px;
     padding: 5px;
     border-radius: 10px;
+    width: 300px;
+    height: 30px;
 
 }
 
 .signup-form button {
-    border: 2px solid green; 
+    border: 1px solid  black; 
+    cursor: pointer;
+    font-weight: bold;
     width: 150px;
-    margin: 10px;
+    margin-left: 95px;
+    margin-top: 10px;
     padding: 5px;
     border-radius: 10px;
+    background-color:  #B549FF;
 
+}
+ 
+.signup-form button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.signup-form h4,h5 {
+    margin-left: 15px;
 }
 
 /*Navigation Page*/
 
 .navigation-page {
-    border: 2px solid purple;
+    border-bottom: 3px solid #5B61FF;
     display: flex; 
     justify-content: center;
-    margin: 10px;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px;
 }
 
 .navigation-links {
