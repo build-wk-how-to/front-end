@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {login} from '../actions';
+import {login, fetchAll} from '../actions';
 import './Components.css';
 
 
@@ -14,10 +14,19 @@ class Login extends Component {
         }
     }
 
+    reroute = () => {
+      console.log(this.props.token);
+      
+      
+    }
+
     login = e => {
       e.preventDefault();
+      // const stupidHack = () => this.props.fetchAll(this.props.token);
+      // const stupidHack2 = () => this.props.history.push('/');
       this.props.login(this.state);
-      this.props.history.push('/');
+      // setTimeout(function(){stupidHack()}, 3000);
+      // setTimeout(function(){stupidHack2()}, 10000);
     }
 
     input = e => {
@@ -65,8 +74,9 @@ class Login extends Component {
 const mapStateToProps = state => {
     return {
         isLoading: state.login.isLoading,
+        token: state.login.token,
         error: state.login.error
     }
 }
 
-export default connect(mapStateToProps, {login})(Login);
+export default connect(mapStateToProps, {login, fetchAll})(Login);

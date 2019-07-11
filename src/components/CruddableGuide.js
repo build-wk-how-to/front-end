@@ -13,6 +13,7 @@ class CruddableGuide extends Component {
       guidecontent: this.props.guidecontent,
       dateposted: this.props.dateposted,
       category: this.props.category,
+      formState: 'hidden'
     }
   }
 
@@ -24,10 +25,16 @@ class CruddableGuide extends Component {
     deleteGuide(this.props.userID, this.state.guideID, this.props.token)
   }
 
+  toggleForm = () =>{
+    this.state.formState === 'hidden'
+      ? this.setState({...this.state, formState: 'shown'})
+      : this.setState({...this.state, formState: 'hidden'})
+  }
+
   render(){
     return(
       <>
-        <form onSubmit={this.submitUpdate}>
+        <form onSubmit={this.submitUpdate} className={this.state.formState}>
           <h3>Title:</h3>
           <input 
             onChange={this.input}
