@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, Link} from 'react-router-dom';
 import './Components.css';
+import logo from './how-to-logo.jpg'
 
 
 export const Navigation = props => {
@@ -14,6 +15,7 @@ export const Navigation = props => {
   
   return(
       <div className="navigation-page">
+          <img id ="logo" src={logo}/>
           <h1>How-To</h1>
           <div className="navigation-links">
               {navSwap}              

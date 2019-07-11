@@ -74,10 +74,12 @@ h1 {
 /*Navigation Page*/
 
 .navigation-page {
-    border: 2px solid purple;
+    border-bottom: 3px solid #5B61FF;
     display: flex; 
     justify-content: center;
-    margin: 10px;
+    flex-direction: row;
+    align-content: center;
+    margin: 20px;
 }
 
 .navigation-links {
