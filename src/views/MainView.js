@@ -11,7 +11,7 @@ class MainView extends Component {
   }
   render(){
     return(
-      <div>
+      <div className='dashboard-header'>
         <h1>Welcome to your How To guides, {this.props.username}!</h1>
       </div>
   )}
