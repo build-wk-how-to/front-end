@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import '../App.css';
 import { connect } from 'react-redux';
+import Dashboard from '../components/Dashboard'
 import {ReadOnlyGuide, CruddableGuide, NewGuide} from '../components/index';
 import {fetchAll} from '../actions/index';
+
 
 class MainView extends Component {
   constructor(props){
@@ -78,10 +80,14 @@ class MainView extends Component {
 
   render(){
     return(
-      <div>
+      <div className='dashboard-header'>
         <h1>Welcome to your How To guides, {this.props.username}!</h1>
+
+        <div className='dashboard-buttons'> 
+
         <div>
           {this.test()}
+
         </div>
       </div>
   )}
