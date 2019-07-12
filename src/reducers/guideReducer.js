@@ -12,9 +12,13 @@ import {
 
 const initialGuideState = {
   fetching: false,
+  fetched: false,
   adding: false,
+  added: false,
   updating: false,
+  updated: false,
   deleting: false,
+  deleted: false,
   guides: [],
   category: 0,
   error: null
@@ -35,8 +39,9 @@ export const guideReducer = (state = initialGuideState, action) => {
       }
       return {
         ...state,
-        guides: action.payload.guides,
+        guides: action.payload,
         fetching: false,
+        fetched: true,
         category: cat,
         error: ''
       }
