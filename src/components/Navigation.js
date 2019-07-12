@@ -8,8 +8,10 @@ export const Navigation = props => {
     props.loggedIn === false ? (
       <Link to="/">Log In</Link>
     ) : (
-      <>
-        <Link to="/">Home</Link> <h2 onClick={props.logout}>Log Out</h2>
+      <> <Link to="/">Home</Link> 
+      <div>
+        <h2 onClick={props.logout}>Log Out</h2>
+        </div>
       </>
     );
 
