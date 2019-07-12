@@ -106,4 +106,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {fetchAll})(MainView);
+export default connect(mapStateToProps, {fetchAll})(MainView)
