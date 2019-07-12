@@ -12,7 +12,7 @@ class ReadOnlyGuide extends Component {
       category: this.props.category,
 
     }
-  }
+  } 
 
   render(){
     return(

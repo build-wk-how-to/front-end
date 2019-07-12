@@ -125,7 +125,7 @@ h1 {
     flex-direction: row;
     align-items: center;
     margin: 30px;
-    font-family: "Bitstream Charter"; font-size: 24px;
+    font-family: "Bitstream Charter";
 }
 
 .navigation-links {
@@ -139,4 +139,10 @@ h1 {
     display: flex;
     justify-content: center;
     font-family: "Bitstream Charter"; font-size: 24px;
+}
+
+.dashboard-boxes {
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
 }

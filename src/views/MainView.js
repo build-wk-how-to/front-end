@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../App.css';
 import { connect } from 'react-redux';
+import Dashboard from '../components/Dashboard'
 
 class MainView extends Component {
   constructor(props){
@@ -13,6 +14,9 @@ class MainView extends Component {
     return(
       <div className='dashboard-header'>
         <h1>Welcome to your How To guides, {this.props.username}!</h1>
+        <div className='dashboard-buttons'> 
+
+        </div>
       </div>
   )}
 }
